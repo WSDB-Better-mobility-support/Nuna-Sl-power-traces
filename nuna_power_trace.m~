@@ -13,7 +13,7 @@ ftSz = 20;
 figure('Position',[440 378 560 620/3]);
 box on
 hold on
-h1 = plot (x , N ,':b', x , S,'-r');
+h1 = plot (x , N , x , S , 'linestyle','-');
 leg = legend('Nuna','Single-location');
 set(leg, 'fontSize', (ftSz-4))
 xlabel('Time (seconds)');
@@ -31,7 +31,7 @@ y1 = [0 3000]; % the coordinates for the y axis
 x2 = [200 200];
 y2 = [0 3000];
 
-plot(x1,y1, '-b', x2,y2, '-b')
+plot(x1,y1, '--b', x2,y2, '--b')
 str1 = 'q';
 t1 = text(100,200,str1);
 set(t1, 'fontSize', (ftSz-8));
@@ -42,7 +42,7 @@ y1 = [0 3000]; % the coordinates for the y axis
 x2 = [4000 4000];
 y2 = [0 3000];
 
-plot(x1,y1, '-b', x2,y2, '-b')
+plot(x1,y1, '--b', x2,y2, '--b')
 str1 = 'q';
 t1 = text(3950 ,200,str1);
 set(t1, 'fontSize', (ftSz-8));
@@ -54,7 +54,7 @@ for x=100:500:4000
     sx2 = [(210+x) (210+x)];
     sy2 = [0 3000];
 
-    plot(sx1,sy1, '-.r', sx2,sy2, '-.r')
+    plot(x1,y1, '--b', x2,y2, '--b')
     str1 = 'q';
     t1 = text((130+x),200,str1);
     set(t1, 'fontSize', (ftSz-8));
